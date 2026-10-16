@@ -25,22 +25,14 @@ app.get('/tarefas/:id', (req, res) => {
     res.json(tarefa);
 });
 
-// app.post('/tarefas', (req, res) => {
-//     const { titulo } = req.body;
-//     // Aceita números ou textos, não tendo limite de caracteres.
-//     if (!titulo) return res.status(400).json({ erro: 'O campo "titulo" e obrigatorio' });
-//     const novaTarefa = { id: proximoId++, titulo, concluida: false };
-//     tarefas.push(novaTarefa);
-//     res.status(201).json(novaTarefa);
-// });
 
 app.post('/tarefas', (req, res) => {
     const { titulo } = req.body;
     if (!titulo || typeof titulo !== 'string') {
-        return res.status(400).json({ erro: 'O campo "titulo" é obrigatório.' });
+        return res.status(400).json({ erro: 'O campo "titulo" é obrigatório e deve ser um texto.' });
     }
     const titulointeiro = titulo.trim();
-    if (tituloLimpo === '') {
+    if (titulointeiro === '') {
         return res.status(400).json({ erro: 'O campo "titulo" não pode ser vazio.' });
     }
     if (titulointeiro.length > 100) {

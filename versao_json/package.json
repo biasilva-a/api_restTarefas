@@ -1,0 +1,24 @@
+{
+  "name": "api_resttarefas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biasilva-a/api_restTarefas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/biasilva-a/api_restTarefas/issues"
+  },
+  "homepage": "https://github.com/biasilva-a/api_restTarefas#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
